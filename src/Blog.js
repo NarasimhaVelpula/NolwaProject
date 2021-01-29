@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import image from './blog/blog1.jpg'
+//import image from './blog/blog1.jpg'
 export class Blog extends Component {
     
     render() {
