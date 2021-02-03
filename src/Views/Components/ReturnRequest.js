@@ -1,6 +1,30 @@
 import React, { Component } from 'react'
 
 export class ReturnRequest extends Component {
+    constructor(){
+        super()
+        this.state={
+            itemName:"ItemName",
+            ReasonsForReturn:[
+                "No longer needed",
+                "Bought by mistake",
+                "Better price available",
+                "Inaccurate website description",
+                "Item defective or doesn't work",
+                "Product damaged, but shipping box OK",
+                "Item arrived too late",
+                "Missing or broken parts",
+                "Product and shipping box both damaged",
+                "Wrong item was sent",
+                "Received extra item I didn't buy",
+                "Didn't approve purchase",
+            ],
+            Comments:"",
+        }
+    }
+    handleChange=e=>{
+        this.setState({Comments:e.target.value})
+    }
     render() {
         return (
             <div class="col-xl-9 col-lg-12 col-md-12">
@@ -24,18 +48,9 @@ export class ReturnRequest extends Component {
 										<select class="form-control select2" data-placeholder="Choose your reason">
 											<optgroup label="Choose your reason">
 												<option value="AL">Choose your reason</option>
-												<option value="AL">No longer needed</option>
-												<option value="AR">Bought by mistake</option>
-												<option value="IL">Better price available</option>
-												<option value="IA">Inaccurate website description</option>
-												<option value="KS">Item defective or doesn't work</option>
-												<option value="KY">Product damaged, but shipping box OK</option>
-												<option value="LA">Item arrived too late</option>
-												<option value="MN">Missing or broken parts</option>
-												<option value="MS">Product and shipping box both damaged</option>
-												<option value="MO">Wrong item was sent</option>
-												<option value="OK">Received extra item I didn't buy</option>
-												<option value="SD">Didn't approve purchase</option>
+												{this.state.ReasonsForReturn.map(item => {
+                                                    return(<option value={item}>{item}</option>)
+                                                })}
 											</optgroup>
 										</select>
 									</div>
@@ -45,13 +60,13 @@ export class ReturnRequest extends Component {
                                     <div class="col-md-12 mb-3">
                                         <label class="form-label">Write your comment</label>
                                     <div class="form-group">
-                                        <textarea class="form-control" name="example-textarea-input" rows="3" placeholder="Write your reason"></textarea>
+                                        <textarea class="form-control" name="example-textarea-input" value={this.state.Comments} rows="3" placeholder="Write your reason" onChange={this.handleChange}></textarea>
                                     </div>
                                 </div>
                                 </div>
                                 <div class="row">
 									<div class="col-md-4">
-										<a href="" class="btn btn-primary btn-sm mt-3">Proceed to Return</a>
+										<button class="btn btn-primary btn-sm mt-3">Proceed to Return</button>
 									</div>
                                 </div>
 								</div>
