@@ -13,6 +13,8 @@ import { SellerFeedback } from './Views/Components/SellerFeedback'
 import { DeliveryFeedback } from './Views/Components/DeliveryFeedback'
 import { ProductReview } from './Views/Components/ProductReview'
 import ReturnRequest from './Views/Components/ReturnRequest'
+import Settings from './Views/Components/Settings'
+import Notification from './Views/Components/Notification'
 export class App extends Component {
 
   render() {
@@ -36,6 +38,8 @@ export class App extends Component {
                         <Route exact path="/deliveryFeedback" component={DeliveryFeedback} />
                         <Route exact path="/productReview" component={ProductReview} />
                         <Route exact path="/returnRequest" component={ReturnRequest} />
+                        <Route exact path="/settings" component={Settings} />
+                        <Route exact path="/notifications" component={Notification} />
                     </Switch>
                           </div>
       

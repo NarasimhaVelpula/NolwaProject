@@ -31,7 +31,7 @@ export class SideBar extends Component {
                 <NavLink to="myfavorite.html" activeClassName="active d-flex border-bottom" className="d-flex  border-bottom">
                   <span class="icon1 mr-3"><i class="icon icon-heart"></i></span> My Favorite
                 </NavLink>
-                <NavLink to="notifications.html" activeClassName="active d-flex border-bottom" className="d-flex  border-bottom">
+                <NavLink to="notifications" activeClassName="active d-flex border-bottom" className="d-flex  border-bottom">
                   <span class="icon1 mr-3"><i class="icon icon-bell"></i></span> Notification
                 </NavLink>
                 <NavLink to="payments.html" activeClassName="active d-flex border-bottom" className="d-flex  border-bottom">
@@ -53,7 +53,7 @@ export class SideBar extends Component {
                 <NavLink to="add-item.html" activeClassName="active d-flex border-bottom" className="d-flex  border-bottom">
                   <span class="icon1 mr-3"><i class="icon icon-plus"></i></span> Add Item 
                 </NavLink>
-                <NavLink to="settings.html" activeClassName="active d-flex border-bottom" className="d-flex  border-bottom">
+                <NavLink to="settings" activeClassName="active d-flex border-bottom" className="d-flex  border-bottom">
                   <span class="icon1 mr-3"><i class="icon icon-settings"></i></span> Settings
                 </NavLink>
                 <NavLink to="#" class="d-flex">
