@@ -104,6 +104,8 @@ export class DeliveryPage extends Component {
                                                           </div>
                                                       </div>
                                                     </td>
+
+						</tr>
                                                     <tr class="border-bottom">
                                                         <td>
                                                             <div class="row">
@@ -124,7 +126,7 @@ export class DeliveryPage extends Component {
                                                                     <span class="font-weight-bold">DELIVERY DETAILS:</span>  <br />
                                                             <span class="font-weight-200">Courier Partner: {this.state.courierPatner} </span>  <br />
 															<span class="font-weight-200">Tracking ID: {this.state.trackingId}</span>  <br />
-															
+														
 																   </div>
                                                                </div>
                                                               
@@ -146,14 +148,12 @@ export class DeliveryPage extends Component {
                                                             </div>
                                                         </td>
                                                     </tr>
-												</tr>
 											</tbody>
 										</table>
 									</div>
 								</div>
 							</div>
 						</div>
-                    
         )
     }
 }
